@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reels Digital – Creative Digital Agency</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root{
+      --primary:#6a1b9a;
+      --secondary:#ff9800;
+      --bg:#f5f6fa;
+      --dark:#1f1f1f;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#000;color:#eaeaea}
+    nav{position:fixed;top:0;width:100%;z-index:1000;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;padding:14px 30px}
+    nav a{color:#333;text-decoration:none;margin:0 14px;font-weight:600}
+    nav a:hover{color:var(--primary)}
+    header.hero{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+    .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+    .hero-overlay{position:absolute;inset:0;background:rgba(106,27,154,.7);z-index:-1}
+    .hero-content{position:relative;z-index:2;padding:110px 20px 60px}
+    header h1{font-size:36px;margin:16px 0 8px}
+    header p{font-size:16px;max-width:680px;margin:auto}
+    .btn{display:inline-block;margin-top:30px;padding:14px 34px;background:var(--secondary);color:#fff;border-radius:30px;text-decoration:none;font-weight:600}
+    section{padding:90px 20px;max-width:1200px;margin:auto}
+    .title{text-align:center;margin-bottom:50px}
+    .title h2{color:var(--primary);font-size:34px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .card{background:rgba(255,255,255,0.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:30px;border-radius:20px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.35);transition:all .4s ease;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.15)}
+    .card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--primary),var(--secondary));opacity:0;transition:.4s}
+    .card:hover::before{opacity:.08}
+    .card:hover{transform:translateY(-12px) scale(1.02);box-shadow:0 25px 50px rgba(0,0,0,.18)}
+    .video-grid .video-card{position:relative;border-radius:18px;overflow:hidden;cursor:pointer}
+    .video-grid video{width:100%;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.2);pointer-events:none}
+    @media (hover:none){.video-grid video{pointer-events:auto}}
+    .video-grid .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);opacity:0;transition:.3s}
+    .video-grid .play-overlay span{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--primary)}
+    .video-grid .video-card:hover .play-overlay{opacity:1}
+    .cta{background:linear-gradient(135deg,var(--secondary),#ffb300);color:#fff;text-align:center;padding:90px 20px;border-radius:26px}
+    footer{background:var(--dark);color:#aaa;text-align:center;padding:26px}
+
+/* PARTNER CAROUSEL */
+.partner-slider{overflow:hidden;position:relative}
+.partner-track{display:flex;gap:60px;animation:scrollPartner 25s linear infinite}
+.partner-item{flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.partner-item img{max-width:140px;opacity:.7;filter:grayscale(100%);transition:.3s}
+.partner-item img:hover{opacity:1;filter:grayscale(0)}
+@keyframes scrollPartner{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+  </style>
+</head>
+<body>
+
+<nav>
+  <img src="logo-brand.png" alt="Logo Reels Digital" style="height:42px">
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero-reels.mp4" type="video/mp4" />
+    Browser Anda tidak mendukung video.
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="logo-brand.png" alt="Logo Reels Digital" style="height:90px;margin-bottom:20px">
+    <h1>Reels Digital</h1>
+    <p>Creative Digital Reels & Brand Growth</p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="title" data-aos="fade-up"><h2>Tentang Kami</h2></div>
+  <p style="text-align:center;max-width:900px;margin:auto" data-aos="fade-up">
+    Reels Digital adalah agensi kreatif yang membantu bisnis berkembang melalui konten video reels, desain branding profesional, dan strategi digital yang efektif.
+  </p>
+</section>
+
+<section id="services">
+  <div class="title" data-aos="fade-up"><h2>Layanan Kami</h2></div>
+  <div class="grid">
+    <div class="card" data-aos="zoom-in"><h3>Reels & Short Video</h3><p>Konten video engaging & viral</p></div>
+    <div class="card" data-aos="zoom-in"><h3>Branding & Logo</h3><p>Identitas visual profesional</p></div>
+    <div class="card" data-aos="zoom-in"><h3>Digital Marketing</h3><p>Strategi konversi & traffic</p></div>
+    <div class="card" data-aos="zoom-in"><h3>Website</h3><p>Landing page & website bisnis</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="title" data-aos="fade-up"><h2>Contoh Video Reels</h2></div>
+  <div class="grid video-grid">
+    <div class="video-card" data-aos="fade-up"><video src="reels1.mp4" muted loop></video><div class="play-overlay"><span>▶</span></div></div>
+    <div class="video-card" data-aos="fade-up"><video src="reels2.mp4" muted loop></video><div class="play-overlay"><span>▶</span></div></div>
+    <div class="video-card" data-aos="fade-up"><video src="reels3.mp4" muted loop></video><div class="play-overlay"><span>▶</span></div></div>
+  </div>
+</section>
+
+<!-- VISI & MISI -->
+<section id="vision-mission">
+  <div class="title" data-aos="fade-up">
+    <h2>Visi & Misi Perusahaan</h2>
+    <p>Arah dan komitmen Reels Digital</p>
+  </div>
+  <div class="grid">
+    <div class="card" data-aos="fade-up">
+      <h3>Visi</h3>
+      <p style="font-size:15px;line-height:1.7">
+        Menjadi perusahaan agensi digital kreatif yang terpercaya, inovatif, dan berdaya saing tinggi dalam membantu brand dan bisnis bertumbuh secara berkelanjutan di era digital.
+      </p>
+    </div>
+    <div class="card" data-aos="fade-up">
+      <h3>Misi</h3>
+      <ul style="text-align:left;font-size:15px;line-height:1.7;padding-left:18px">
+        <li>Menyediakan layanan konten digital, video reels, dan branding yang profesional serta relevan dengan tren pasar.</li>
+        <li>Mengembangkan strategi digital marketing yang efektif, terukur, dan berorientasi pada hasil.</li>
+        <li>Membangun kemitraan jangka panjang dengan klien melalui komunikasi yang transparan dan pelayanan berkualitas.</li>
+        <li>Mendorong inovasi, kreativitas, dan pengembangan sumber daya manusia secara berkelanjutan.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="title" data-aos="fade-up"><h2>Tim Kami</h2><p>Profesional kreatif di balik Reels Digital</p></div>
+  <div class="grid">
+    <div class="card" data-aos="zoom-in">
+      <img src="team1.jpg" alt="CEO" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:15px">
+      <h3>Andi Pratama</h3>
+      <p>Founder & Creative Director</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="team2.jpg" alt="Strategist" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:15px">
+      <h3>Siti Rahma</h3>
+      <p>Digital Marketing Strategist</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="team3.jpg" alt="Editor" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:15px">
+      <h3>Bima Saputra</h3>
+      <p>Video Editor & Motion Designer</p>
+    </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="team4.jpg" alt="Designer" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:15px">
+      <h3>Ayu Lestari</h3>
+      <p>Branding & Visual Designer</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta" data-aos="zoom-in">
+    <h2>Siap Naik Level Digital?</h2>
+    <p>Hubungi Reels Digital sekarang</p>
+    <a class="btn" href="https://wa.me/628xxxxxxxxxx">WhatsApp Kami</a>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section>
+  <div class="title" data-aos="fade-up"><h2>Kata Penutup</h2></div>
+  <p style="text-align:center;max-width:900px;margin:auto" data-aos="fade-up">
+    Reels Digital hadir sebagai mitra strategis untuk membantu brand Anda tumbuh di era digital yang kompetitif. Dengan pendekatan kreatif, teknologi modern, dan tim profesional, kami berkomitmen memberikan solusi yang berdampak nyata bagi bisnis Anda.
+  </p>
+</section>
+
+<!-- SPONSOR & PARTNER (CAROUSEL) -->
+<section id="partners">
+  <div class="title" data-aos="fade-up">
+    <h2>Sponsor & Partner</h2>
+    <p>Brand & mitra yang telah bekerja sama dengan kami</p>
+  </div>
+
+  <div class="partner-slider" data-aos="fade-up">
+    <div class="partner-track">
+      <div class="partner-item"><img src="partner1.png" alt="Partner 1"></div>
+      <div class="partner-item"><img src="partner2.png" alt="Partner 2"></div>
+      <div class="partner-item"><img src="partner3.png" alt="Partner 3"></div>
+      <div class="partner-item"><img src="partner4.png" alt="Partner 4"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="partner-item"><img src="partner1.png" alt="Partner 1"></div>
+      <div class="partner-item"><img src="partner2.png" alt="Partner 2"></div>
+      <div class="partner-item"><img src="partner3.png" alt="Partner 3"></div>
+      <div class="partner-item"><img src="partner4.png" alt="Partner 4"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS & CONDITIONS -->
+<section id="terms">
+  <div class="title" data-aos="fade-up"><h2>Terms & Conditions</h2></div>
+  <div style="max-width:900px;margin:auto;font-size:14px;color:#666;line-height:1.8" data-aos="fade-up">
+    <p>
+      Dengan mengakses dan menggunakan website Reels Digital, Anda dianggap telah membaca, memahami, dan menyetujui syarat dan ketentuan berikut.
+    </p>
+    <p>
+      Seluruh konten, desain, logo, video, dan materi yang ditampilkan di website ini merupakan milik Reels Digital dan dilindungi oleh hukum yang berlaku. Dilarang menggunakan, menyalin, atau mendistribusikan sebagian maupun seluruh konten tanpa izin tertulis.
+    </p>
+    <p>
+      Layanan yang disediakan Reels Digital bertujuan untuk mendukung kebutuhan branding, pemasaran digital, dan konten kreatif. Hasil yang diperoleh dapat berbeda pada setiap klien tergantung strategi, kondisi pasar, industri, serta faktor eksternal lainnya.
+    </p>
+    <p>
+      Reels Digital tidak memberikan jaminan atas hasil tertentu di luar kesepakatan tertulis yang telah disetujui bersama. Segala bentuk kerja sama akan diatur secara resmi melalui perjanjian yang sah sesuai dengan ketentuan hukum yang berlaku.
+    </p>
+  </div>
+</section>
+
+<footer>© 2026 Reels Digital. All Rights Reserved.</footer>
+
+<script>
+  document.querySelectorAll('.video-card').forEach(card => {
+    const video = card.querySelector('video');
+
+    // Desktop hover
+    card.addEventListener('mouseenter', () => {
+      if (window.matchMedia('(hover:hover)').matches) video.play();
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (window.matchMedia('(hover:hover)').matches) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
+    // Mobile tap
+    card.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  });
+
+  // pause carousel on hover
+const track = document.querySelector('.partner-track');
+if(track){
+  track.addEventListener('mouseenter',()=>track.style.animationPlayState='paused');
+  track.addEventListener('mouseleave',()=>track.style.animationPlayState='running');
+}
+
+AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
